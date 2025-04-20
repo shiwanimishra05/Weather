@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #a2d4f3 0%, #d0f0fd 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 25px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.weather-card:hover {
+  transform: scale(1.03);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2b2d42;
+}
+
+.search-box {
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 60%;
+  margin-right: 10px;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #0096c7;
+  color: white;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-box button:hover {
+  background-color: #0077b6;
+}
+
+.unit-toggle {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.unit-toggle select {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+.info h2 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #023e8a;
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.credit {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Water ripple animation */
+@keyframes ripple {
+  0% {
+      transform: scale(0.9);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1.5);
+      opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(173, 216, 230, 0.3);
+  border-radius: 50%;
+  animation: ripple 4s infinite;
+  z-index: 0;
+}
